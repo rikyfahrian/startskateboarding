@@ -8,6 +8,52 @@ export type ShoeSize = {
   note: string;
 };
 
+export type WheelsBase = {
+  size: number;
+  shape: string;
+  hardness: string;
+  note: string;
+  playgrounds: "street" | "park";
+};
+
+export const WheelsTypes: WheelsBase[] = [
+  {
+    size: 52,
+    shape: "Conical Full",
+    hardness: "99A",
+    note: "Tapak lebar dan stabil, sangat nyaman untuk mengunci grind di box atau rel.",
+    playgrounds: "street",
+  },
+  {
+    size: 53,
+    shape: "Classic V-Shape",
+    hardness: "101A",
+    note: "Desain slim dan ringan, bikin pop papan lebih responsif untuk trik flip.",
+    playgrounds: "street",
+  },
+  {
+    size: 54,
+    shape: "Tablet",
+    hardness: "99A",
+    note: "Perpaduan pas antara kecepatan dan kontrol, cocok untuk all-around park skating.",
+    playgrounds: "park",
+  },
+  {
+    size: 56,
+    shape: "Sidecut",
+    hardness: "84B",
+    note: "Sangat keras dan cepat, didesain khusus agar presisi saat lock-in di coping bowl.",
+    playgrounds: "park",
+  },
+  {
+    size: 56,
+    shape: "Cruiser Standard",
+    hardness: "78A",
+    note: "Roda empuk khusus komuter, sangat senyap dan halus menerjang aspal kasar.",
+    playgrounds: "street",
+  },
+];
+
 export const shoeSizes: ShoeSize[] = [
   {
     size: 34,

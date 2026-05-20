@@ -4,7 +4,7 @@
 
 import { useMemo, useState } from "react";
 import { Card, CardContent } from "../../components/ui/card";
-import { shoeSizes } from "../utils/data";
+import { shoeSizes, WheelsTypes } from "../utils/data";
 import { Info } from "lucide-react";
 import { cn } from "../../lib/utils";
 import Link from "next/link";
@@ -14,13 +14,26 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../../components/ui/tooltip";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/src/components/ui/select";
 
 export default function SkateboardDeckFinder() {
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
+  const [selectedPlayground, setSelectedPlayground] = useState<string | null>(null);
 
   const selectedDeck = useMemo(() => {
     return shoeSizes.find((item) => item.size === selectedSize);
   }, [selectedSize]);
+
+  const selectedWheels = useMemo(() => {
+    return WheelsTypes.filter((item) => item.playgrounds === selectedPlayground);
+  }, [selectedPlayground]);
 
   return (
     <div className="flex flex-col self-center gap-6 max-w-3xl p-6">
@@ -31,7 +44,7 @@ export default function SkateboardDeckFinder() {
         <p className="text-sm text-muted-foreground">
           Ukuran sepatu menjadi acuan untuk memilih papan (deck) karena ukuran kaki mempengaruhi
           kenyamanan, stabilitas, dan kontrol saat bermain skateboard. Ini adalah panduan umum untuk
-          membantu kamu memilih ukuran papan yang tepat berdasarkan ukuran sepatu.
+          membantu kamu memilih ukuran papan (deck) yang tepat berdasarkan ukuran sepatu.
         </p>
       </div>
 
@@ -72,16 +85,13 @@ export default function SkateboardDeckFinder() {
           <CardContent className="space-y-4 p-6">
             <div>
               <p className="text-sm text-muted-foreground">Ukuran Sepatu</p>
-
               <h2 className="text-4xl font-bold">{selectedDeck.size}</h2>
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border p-4 flex flex-col gap-2">
                 <p className="text-sm text-muted-foreground">Ukuran Papan (Deck)</p>
-
                 <h3 className="text-2xl font-bold">{selectedDeck.deck}</h3>
-
                 <Link rel="stylesheet" href="#" className="text-blue-500 underline text-xs">
                   Apa itu Papan (Deck)?
                 </Link>
@@ -89,9 +99,7 @@ export default function SkateboardDeckFinder() {
 
               <div className="rounded-2xl border p-4 flex flex-col gap-2">
                 <p className="text-sm text-muted-foreground">Ukuran Truck</p>
-
                 <h3 className="text-2xl font-bold">{selectedDeck.truck}</h3>
-
                 <Link rel="stylesheet" href="#" className="text-blue-500 underline text-xs">
                   Apa itu Truck?
                 </Link>
@@ -100,8 +108,40 @@ export default function SkateboardDeckFinder() {
 
             <div className="rounded-2xl bg-muted p-4">
               <p className="text-sm text-muted-foreground">Catatan</p>
-
               <p className="mt-1 font-medium">{selectedDeck.note}</p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <h2 className="font-semibold text-lg">Dimana kamu akan bermain skateboard?</h2>
+
+              <Select onValueChange={(value) => setSelectedPlayground(value as "street" | "park")}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Ini mempengaruhi pemilihan roda (wheels) skateboard" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectItem value="park">Skatepark - Bowl - Transition</SelectItem>
+                    <SelectItem value="street">Jalanan - Trotoar</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+
+              {selectedWheels.length > 0 && (
+                <div className="rounded-2xl border p-4 flex flex-col gap-2">
+                  {selectedWheels.map((wheel) => (
+                    <div key={wheel.size} className="rounded-lg bg-muted p-3">
+                      <p className="font-medium">
+                        {wheel.size} mm - {wheel.shape}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{wheel.note}</p>
+                    </div>
+                  ))}
+
+                  <Link rel="stylesheet" href="#" className="text-blue-500 underline text-xs">
+                    Lebih lanjut tentang Roda (Wheels)
+                  </Link>
+                </div>
+              )}
             </div>
 
             <div className="flex items-start gap-2 rounded-xl bg-green-500/15 p-3 text-green-700">
