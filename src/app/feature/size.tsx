@@ -133,6 +133,7 @@ export default function SkateboardDeckFinder() {
                       <p className="font-medium">
                         {wheel.size} mm - {wheel.shape}
                       </p>
+                      <p className="font-me">{wheel.hardness} </p>
                       <p className="text-sm text-muted-foreground">{wheel.note}</p>
                     </div>
                   ))}
@@ -142,6 +143,66 @@ export default function SkateboardDeckFinder() {
                   </Link>
                 </div>
               )}
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <h2 className="font-semibold text-lg">Selanjutnya kamu membutuhkan</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-stretch">
+                <Card className="flex flex-col h-full bg-slate-900 border-slate-800">
+                  <CardContent className="flex flex-col grow p-5 justify-between gap-4">
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-100">Bearing</p>
+                      <p className="text-sm text-slate-400 leading-relaxed">
+                        Gunakan bearing skate-rated yang dirancang khusus untuk skateboard hantaman
+                        tinggi. Hindari patokan rating ABEC industri demi performa dan durabilitas
+                        optimal.
+                      </p>
+                    </div>
+                    <Link
+                      href="/panduan/bearing"
+                      className="text-emerald-400 hover:text-emerald-300 font-medium text-xs transition-colors self-start mt-auto"
+                    >
+                      Apa itu Bearing? →
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card className="flex flex-col h-full bg-slate-900 border-slate-800">
+                  <CardContent className="flex flex-col grow p-5 justify-between gap-4">
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-100">Grip Tape</p>
+                      <p className="text-sm text-slate-400 leading-relaxed">
+                        Lapisan kasar seperti amplas yang ditempelkan di atas papan (deck) untuk
+                        memberikan cengkeraman kaki yang baik saat melakukan trik pop atau flip.
+                      </p>
+                    </div>
+                    <Link
+                      href="/panduan/griptape"
+                      className="text-emerald-400 hover:text-emerald-300 font-medium text-xs transition-colors self-start mt-auto"
+                    >
+                      Apa itu Grip Tape? →
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card className="flex flex-col h-full bg-slate-900 border-slate-800">
+                  <CardContent className="flex flex-col grow p-5 justify-between gap-4">
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-100">Baut (Hardware / Bolts)</p>
+                      <p className="text-sm text-slate-400 leading-relaxed">
+                        Set baut dan mur yang digunakan untuk mengikat keras baseplate truck dengan
+                        papan skateboard secara presisi. Biasanya berukuran 7/8" sampai 1".
+                      </p>
+                    </div>
+                    <Link
+                      href="/panduan/bolts"
+                      className="text-emerald-400 hover:text-emerald-300 font-medium text-xs transition-colors self-start mt-auto"
+                    >
+                      Lebih lanjut tentang Baut (Bolts) →
+                    </Link>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
             <div className="flex items-start gap-2 rounded-xl bg-green-500/15 p-3 text-green-700">
