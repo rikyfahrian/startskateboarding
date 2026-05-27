@@ -190,8 +190,8 @@ export default function SkateboardDeckFinder() {
                     <div className="space-y-2">
                       <p className="font-bold text-slate-100">Baut (Hardware / Bolts)</p>
                       <p className="text-sm text-slate-400 leading-relaxed">
-                        Set baut dan mur yang digunakan untuk mengikat keras baseplate truck dengan
-                        papan skateboard secara presisi. Biasanya berukuran 7/8" sampai 1".
+                        Set baut dan mur yang digunakan untuk mengaitkan truck dengan papan
+                        skateboard.
                       </p>
                     </div>
                     <Link
