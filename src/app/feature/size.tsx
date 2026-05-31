@@ -100,7 +100,7 @@ export default function SkateboardDeckFinder() {
               <div className="rounded-2xl border p-4 flex flex-col gap-2">
                 <p className="text-sm text-muted-foreground">Ukuran Truck</p>
                 <h3 className="text-2xl font-bold">{selectedDeck.truck}</h3>
-                <Link rel="stylesheet" href="#" className="text-blue-500 underline text-xs">
+                <Link rel="stylesheet" href="/truck" className="text-blue-500 underline text-xs">
                   Apa itu Truck?
                 </Link>
               </div>

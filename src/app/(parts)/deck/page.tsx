@@ -14,6 +14,7 @@ export default function DeckPage() {
         width={800}
         height={400}
         className="rounded-lg object-cover self-center"
+        loading="eager"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : sourceskate.com</p>
 
