@@ -1,7 +1,7 @@
 /** @format */
 
 import Image from "next/image";
-import { AccordionBasic } from "./accordion";
+import { AccordionDeck } from "./accordion";
 
 export default function DeckPage() {
   return (
@@ -110,7 +110,7 @@ export default function DeckPage() {
 
         <h2 className="text-xl font-semibold">Sering Ditanyakan</h2>
         <div>
-          <AccordionBasic />
+          <AccordionDeck />
         </div>
       </div>
     </div>
