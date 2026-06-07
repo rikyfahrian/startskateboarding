@@ -138,7 +138,7 @@ export default function SkateboardDeckFinder() {
                     </div>
                   ))}
 
-                  <Link rel="stylesheet" href="#" className="text-blue-500 underline text-xs">
+                  <Link rel="stylesheet" href="/wheels" className="text-blue-500 underline text-xs">
                     Lebih lanjut tentang Roda (Wheels)
                   </Link>
                 </div>

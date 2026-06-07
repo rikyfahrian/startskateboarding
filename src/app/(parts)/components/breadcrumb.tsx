@@ -10,7 +10,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../../components/ui/breadcrumb";
+} from "../../../components/ui/breadcrumb";
 import React from "react";
 
 const labelMap: Record<string, string> = {

@@ -1,6 +1,6 @@
 /** @format */
 
-import { AppBreadcrumb } from "./breadcrumb";
+import { AppBreadcrumb } from "./components/breadcrumb";
 
 export default function PartsLayout({ children }: { children: React.ReactNode }) {
   return (
