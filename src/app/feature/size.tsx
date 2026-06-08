@@ -178,7 +178,7 @@ export default function SkateboardDeckFinder() {
                         </p>
                       </div>
                       <Link
-                        href="/panduan/griptape"
+                        href="/griptape"
                         className="text-emerald-400 hover:text-emerald-300 font-medium text-xs transition-colors self-start mt-auto"
                       >
                         Apa itu Grip Tape? →

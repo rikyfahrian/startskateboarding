@@ -108,8 +108,10 @@ export default function DeckPage() {
           </ul>
         </div>
 
-        <h2 className="text-xl font-semibold">Sering Ditanyakan</h2>
         <div>
+          <h2 className="text-xl font-semibold mt-4 bg-green-200 rounded-2xl p-3 text-green-800 w-max">
+            Sering Ditanyakan
+          </h2>
           <AccordionDeck />
         </div>
       </div>
