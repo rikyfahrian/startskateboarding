@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { AccordionDeck } from "./accordion";
+import { CircleQuestionMark } from "lucide-react";
 
 export default function DeckPage() {
   return (
@@ -109,9 +110,11 @@ export default function DeckPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold mt-4 bg-green-200 rounded-2xl p-3 text-green-800 w-max">
-            Sering Ditanyakan
-          </h2>
+          <div className="flex items-center gap-2 mb-4 text-xl font-semibold mt-4 bg-green-200 rounded-2xl p-3 text-green-800 w-max">
+            <h2 className="">Sering Ditanyakan</h2>
+            <CircleQuestionMark className="w-6 h-6 " />
+          </div>
+
           <AccordionDeck />
         </div>
       </div>
