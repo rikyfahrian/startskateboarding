@@ -38,7 +38,7 @@ export default function SkateboardDeckFinder() {
   return (
     <div className="flex flex-col self-center gap-6 max-w-3xl p-6">
       <div>
-        <h2 className="self-center tracking-tight font-semibold text-xl flex flex-col">
+        <h2 className="tracking-tight font-semibold text-lg flex flex-col sm:text-xl">
           Ketahui Ukuran Sepatu Kamu
         </h2>
         <p className="text-sm text-muted-foreground">
@@ -82,16 +82,16 @@ export default function SkateboardDeckFinder() {
 
       {selectedDeck && (
         <Card className="animate-in fade-in zoom-in-95 duration-300">
-          <CardContent className="space-y-4 p-6">
+          <CardContent className="space-y-4 py-1 sm:p-6">
             <div>
               <p className="text-sm text-muted-foreground">Ukuran Sepatu</p>
-              <h2 className="text-4xl font-bold">{selectedDeck.size}</h2>
+              <h2 className="text-2xl sm:text-4xl font-bold">{selectedDeck.size}</h2>
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border p-4 flex flex-col gap-2">
                 <p className="text-sm text-muted-foreground">Ukuran Papan (Deck)</p>
-                <h3 className="text-2xl font-bold">{selectedDeck.deck}</h3>
+                <h3 className="text-xl  sm:text-2xl font-bold">{selectedDeck.deck}</h3>
                 <Link rel="stylesheet" href="/deck" className="text-blue-500 underline text-xs">
                   Apa itu Papan (Deck)?
                 </Link>
@@ -99,7 +99,7 @@ export default function SkateboardDeckFinder() {
 
               <div className="rounded-2xl border p-4 flex flex-col gap-2">
                 <p className="text-sm text-muted-foreground">Ukuran Truck</p>
-                <h3 className="text-2xl font-bold">{selectedDeck.truck}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold">{selectedDeck.truck}</h3>
                 <Link rel="stylesheet" href="/truck" className="text-blue-500 underline text-xs">
                   Apa itu Truck?
                 </Link>
@@ -108,11 +108,13 @@ export default function SkateboardDeckFinder() {
 
             <div className="rounded-2xl bg-muted p-4">
               <p className="text-sm text-muted-foreground">Catatan</p>
-              <p className="mt-1 font-medium">{selectedDeck.note}</p>
+              <p className="mt-1 font-medium text-xs sm:text-sm">{selectedDeck.note}</p>
             </div>
 
             <div className="flex flex-col gap-2">
-              <h2 className="font-semibold text-lg">Dimana kamu akan bermain skateboard?</h2>
+              <h2 className="font-semibold text-md md:text-lg">
+                Dimana kamu akan bermain skateboard?
+              </h2>
 
               <Select onValueChange={(value) => setSelectedPlayground(value as "street" | "park")}>
                 <SelectTrigger className="w-full">

@@ -6,7 +6,7 @@ import SkateboardDeckFinder from "./feature/size";
 export default function HomePage() {
   return (
     <div className="flex flex-col p-8 font-sans gap-2">
-      <h1 className="text-3xl font-medium tracking-tight self-center">
+      <h1 className="text-lg font-medium tracking-tight self-center sm:text-3xl ">
         Panduan Merakit Skateboard
       </h1>
 
