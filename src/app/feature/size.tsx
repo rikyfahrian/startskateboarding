@@ -196,7 +196,7 @@ export default function SkateboardDeckFinder() {
                         </p>
                       </div>
                       <Link
-                        href="/panduan/bolts"
+                        href="/hardware"
                         className="text-emerald-400 hover:text-emerald-300 font-medium text-xs transition-colors self-start mt-auto"
                       >
                         Lebih lanjut tentang Baut (Bolts) →
