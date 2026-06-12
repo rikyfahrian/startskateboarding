@@ -1,6 +1,5 @@
 /** @format */
 
-import Image from "next/image";
 import { AccordionBearing } from "./accordion";
 import { CircleQuestionMark } from "lucide-react";
 import ImageWithLoading from "../components/imageLoad";
