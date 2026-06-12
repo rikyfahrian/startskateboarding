@@ -36,7 +36,7 @@ export default function SkateboardDeckFinder() {
   }, [selectedPlayground]);
 
   return (
-    <div className="flex flex-col self-center gap-6 max-w-3xl p-6">
+    <div className="flex flex-col self-center gap-6 max-w-3xl p-3 sm:p-6 w-full">
       <div>
         <h2 className="tracking-tight font-semibold text-lg flex flex-col sm:text-xl">
           Ketahui Ukuran Sepatu Kamu
@@ -82,16 +82,18 @@ export default function SkateboardDeckFinder() {
 
       {selectedDeck && (
         <Card className="animate-in fade-in zoom-in-95 duration-300">
-          <CardContent className="space-y-4 py-1 sm:p-6">
+          <CardContent className="space-y-4 p-3 sm:p-6">
             <div>
               <p className="text-sm text-muted-foreground">Ukuran Sepatu</p>
               <h2 className="text-2xl sm:text-4xl font-bold">{selectedDeck.size}</h2>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className="rounded-2xl border p-4 flex flex-col gap-2">
+            <div className="grid gap-4 md:grid-cols-2 ">
+              <div className="rounded-2xl border p-4 flex flex-col gap-2 ">
                 <p className="text-sm text-muted-foreground">Ukuran Papan (Deck)</p>
-                <h3 className="text-xl  sm:text-2xl font-bold">{selectedDeck.deck}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold wrap-break-word">
+                  {selectedDeck.deck}
+                </h3>
                 <Link rel="stylesheet" href="/deck" className="text-blue-500 underline text-xs">
                   Apa itu Papan (Deck)?
                 </Link>
@@ -129,7 +131,7 @@ export default function SkateboardDeckFinder() {
               </Select>
 
               {selectedWheels.length > 0 && (
-                <div className="rounded-2xl border p-4 flex flex-col gap-2">
+                <div className="rounded-2xl  p-2 sm:p-4 sm:border flex flex-col gap-2">
                   {selectedWheels.map((wheel) => (
                     <div key={wheel.size} className="rounded-lg bg-muted p-3">
                       <p className="font-medium">
@@ -149,8 +151,8 @@ export default function SkateboardDeckFinder() {
 
             {selectedWheels.length > 0 && (
               <div className="flex flex-col gap-2">
-                <h2 className="font-semibold text-lg">Selanjutnya kamu membutuhkan</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-stretch">
+                <h2 className="font-semibold text-md sm:text-lg">Selanjutnya kamu membutuhkan</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <Card className="flex flex-col h-full bg-slate-900 border-slate-800">
                     <CardContent className="flex flex-col grow p-5 justify-between gap-4">
                       <div className="space-y-2">
