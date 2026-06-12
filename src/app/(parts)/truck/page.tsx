@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { CircleQuestionMark, Info } from "lucide-react";
 import { AccordionTruck } from "./accordion";
+import ImageWithLoading from "../components/imageLoad";
 
 export default function DeckPage() {
   return (
     <div className="flex flex-col  tracking-tight gap-6  p-6 max-w-4xl self-center w-full">
       <h1 className=" self-center font-semibold text-3xl flex flex-col">Truck (Truk Skateboard)</h1>
 
-      <Image
+      <ImageWithLoading
         src="/truck.png"
         alt="Truck Skateboard"
         width={800}
         height={400}
-        className="rounded-lg object-cover self-center"
-        loading="eager"
+        className="rounded-lg object-cover"
+        containerClassName="self-center"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : sourceskate.com</p>
 
@@ -82,12 +83,13 @@ export default function DeckPage() {
           skateboard menawarkan produk mereka dalam pilihan rendah dan tinggi, dan masing-masing
           akan memiliki performa yang sedikit berbeda.
         </p>
-        <Image
+        <ImageWithLoading
           src="/hightruck.png"
           alt="Height Truck Skateboard"
           width={500}
           height={400}
-          className="rounded-lg object-cover self-center"
+          className="rounded-lg object-cover"
+          containerClassName="self-center"
         />
 
         <p>

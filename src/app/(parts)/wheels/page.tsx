@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { CircleQuestionMark, Info } from "lucide-react";
 import { AccordionWheels } from "./accordion";
+import ImageWithLoading from "../components/imageLoad";
 
 export default function DeckPage() {
   return (
@@ -11,13 +12,13 @@ export default function DeckPage() {
         Wheels (Roda Skateboard)
       </h1>
 
-      <Image
+      <ImageWithLoading
         src="/wheels.png"
         alt="Wheels Skateboard"
         width={800}
         height={400}
-        className="rounded-lg object-cover self-center"
-        loading="eager"
+        className="rounded-lg object-cover"
+        containerClassName="self-center"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : sourceskate.com</p>
 
@@ -57,12 +58,13 @@ export default function DeckPage() {
           lebih ringan, membuat Anda duduk lebih dekat ke tanah, dan lebih mudah dikendalikan.
         </p>
 
-        <Image
+        <ImageWithLoading
           src="/wheelsd.png"
           alt="Diameter Roda Skateboard"
           width={400}
           height={400}
-          className="rounded-lg object-cover self-center"
+          className="rounded-lg object-cover"
+          containerClassName="self-center"
         />
 
         <p>
@@ -84,12 +86,13 @@ export default function DeckPage() {
       <div className="text-sm tracking-normal leading-5 flex flex-col gap-2">
         <h2 className="text-xl font-semibold">Tabel Ukuran Roda Skateboard</h2>
 
-        <Image
+        <ImageWithLoading
           src="/tablewheels.png"
           alt="Tabel Ukuran Roda Skateboard"
           width={500}
           height={400}
-          className="rounded-lg object-cover self-start"
+          className="rounded-lg object-cover"
+          containerClassName="self-start"
         />
 
         <div className="flex items-start gap-2 rounded-xl bg-green-500/15 p-3 text-green-700">
@@ -116,12 +119,13 @@ export default function DeckPage() {
         </p>
 
         <h2 className="text-md font-semibold">Tabel Kekerasan Roda (Durometer)</h2>
-        <Image
+        <ImageWithLoading
           src="/durometer.png"
           alt="Durometer Roda Skateboard"
           width={600}
           height={400}
-          className="rounded-lg object-cover self-start"
+          className="rounded-lg object-cover"
+          containerClassName="self-start"
         />
 
         <p>
@@ -151,12 +155,13 @@ export default function DeckPage() {
           slide, serta seberapa ringan roda terasa ketika melakukan flip tricks.
         </p>
 
-        <Image
+        <ImageWithLoading
           src="/shapewheels.png"
           alt="Shape Roda Skateboard"
           width={600}
           height={400}
-          className="rounded-lg object-cover self-center"
+          className="rounded-lg object-cover"
+          containerClassName="self-center"
         />
         <p className="text-xs text-muted-foreground text-center">Sumber: spitfirewheels.com</p>
 

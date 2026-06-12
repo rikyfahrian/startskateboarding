@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { AccordionDeck } from "./accordion";
 import { CircleQuestionMark } from "lucide-react";
+import ImageWithLoading from "../components/imageLoad";
 
 export default function DeckPage() {
   return (
     <div className="flex flex-col  tracking-tight gap-6  p-6 max-w-4xl self-center w-full">
       <h1 className=" self-center font-semibold text-3xl flex flex-col">Deck (Papan Skateboard)</h1>
 
-      <Image
+      <ImageWithLoading
         src="/sourceskate.png"
         alt="Deck Skateboard"
         width={800}
         height={400}
-        className="rounded-lg object-cover self-center"
-        loading="eager"
+        className="rounded-lg object-cover"
+        containerClassName="self-center"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : sourceskate.com</p>
 
@@ -38,12 +39,13 @@ export default function DeckPage() {
             memungkinkan papan untuk melentur di bawah tekanan sehingga tahan terhadap kerusakan,
             responsif terhadap gerakan Anda, dan ringan.
           </p>
-          <Image
+          <ImageWithLoading
             src="/plies.png"
             alt="Deck Skateboard"
             width={500}
             height={400}
-            className="rounded-lg object-cover self-center"
+            className="rounded-lg object-cover"
+            containerClassName="self-center"
           />
           <p>
             Kayu maple mentah pertama-tama dipotong menjadi lembaran persegi panjang tipis, yang
@@ -60,12 +62,13 @@ export default function DeckPage() {
             pilihan bentuk dan ukuran papan, dan bagaimana setiap pilihan akan memengaruhi
             pengalaman Anda saat bermain skateboard.
           </p>
-          <Image
+          <ImageWithLoading
             src="/shape.png"
             alt="Deck Skateboard"
             width={500}
             height={400}
-            className="rounded-lg object-cover self-center"
+            className="rounded-lg object-cover"
+            containerClassName="self-center"
           />
 
           <p className="text-xs text-muted-foreground text-center">
@@ -98,12 +101,13 @@ export default function DeckPage() {
               <strong>Concave:</strong> Kelengkungan melengkung ke dalam di sepanjang sisi kiri dan
               kanan papan. Gunanya biar kaki kita bisa mencengkeram papa dengan lebih pas dan
               stabil.
-              <Image
+              <ImageWithLoading
                 src="/concave.png"
                 alt="Deck Skateboard"
                 width={500}
                 height={400}
                 className="rounded-lg object-cover mx-auto"
+                containerClassName="self-center"
               />
             </li>
           </ul>

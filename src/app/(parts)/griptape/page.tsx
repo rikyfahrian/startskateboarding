@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { AccordionGriptape } from "./accordion";
 import { CircleQuestionMark } from "lucide-react";
+import ImageWithLoading from "../components/imageLoad";
 
 export default function GriptapePage() {
   return (
     <div className="flex flex-col tracking-tight gap-6 p-6 max-w-4xl self-center w-full">
       <h1 className="self-center font-semibold text-3xl flex flex-col">Griptape</h1>
 
-      <Image
+      <ImageWithLoading
         src="/griptape.png"
         alt="Griptape Skateboard"
         width={400}
         height={400}
-        className="rounded-lg object-cover self-center"
-        loading="eager"
+        className="rounded-lg object-cover"
+        containerClassName="self-center"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : mobgrip.com</p>
 

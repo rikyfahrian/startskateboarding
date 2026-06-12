@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { AccordionBearing } from "./accordion";
 import { CircleQuestionMark } from "lucide-react";
+import ImageWithLoading from "../components/imageLoad";
 
 export default function BearingPage() {
   return (
     <div className="flex flex-col tracking-tight gap-6 p-6 max-w-4xl self-center w-full">
       <h1 className="self-center font-semibold text-3xl flex flex-col">Bantalan Roda (Bearing)</h1>
 
-      <Image
+      <ImageWithLoading
         src="/bearing.png"
         alt="Bearing Skateboard"
         width={400}
         height={200}
-        className="rounded-lg object-cover self-center"
-        loading="eager"
+        className="rounded-lg object-cover"
+        containerClassName="self-center"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : bronsonspeedco.com</p>
 
@@ -39,12 +40,13 @@ export default function BearingPage() {
             roda bisa berputar cepat dan lancar.
           </p>
 
-          <Image
+          <ImageWithLoading
             src="/bearingparts.png"
             alt="Anatomi Bearing"
             width={500}
             height={400}
-            className="rounded-lg object-cover self-center"
+            className="rounded-lg object-cover"
+            containerClassName="self-center"
           />
           <p className="text-xs text-muted-foreground text-center">
             Bagian-bagian dalam sebuah bearing
@@ -119,12 +121,13 @@ export default function BearingPage() {
             </li>
           </ul>
 
-          <Image
+          <ImageWithLoading
             src="/bearingcleaner.png"
             alt="Membersihkan Bearing"
             width={400}
             height={400}
-            className="rounded-lg object-cover self-center"
+            className="rounded-lg object-cover"
+            containerClassName="self-center"
           />
 
           <p className="text-muted-foreground text-xs text-center">Sumber: Skatedeluxe.com</p>

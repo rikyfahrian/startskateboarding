@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { CircleQuestionMark, Info } from "lucide-react";
 import { AccordionHardware } from "./accordion";
+import ImageWithLoading from "../components/imageLoad";
 
 export default function HardwarePage() {
   return (
     <div className="flex flex-col tracking-tight gap-6 p-6 max-w-4xl self-center w-full">
       <h1 className="self-center font-semibold text-3xl flex flex-col">Baut (Hardware/Bolts)</h1>
 
-      <Image
+      <ImageWithLoading
         src="/bolts.png"
         alt="Hardware Skateboard"
         width={300}
         height={400}
-        className="rounded-lg object-cover self-center"
-        loading="eager"
+        className="rounded-lg object-cover"
+        containerClassName="self-center"
       />
       <p className="text-xs text-muted-foreground text-center">Sumber : sourceskate.com</p>
 
@@ -71,12 +72,13 @@ export default function HardwarePage() {
           lebih kecil kemungkinannya untuk dol atau slip saat dikencangkan.
         </p>
 
-        <Image
+        <ImageWithLoading
           src="/allenbolts.png"
           alt="Jenis Kepala Baut Skateboard"
           width={300}
           height={400}
-          className="self-center"
+          className="rounded-lg object-cover"
+          containerClassName="self-center"
         />
 
         <p className="text-xs text-muted-foreground text-center">Sumber: sanctionnow.com</p>
