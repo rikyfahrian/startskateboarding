@@ -5,7 +5,7 @@
 import { useMemo, useState } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import { shoeSizes, WheelsTypes } from "../utils/data";
-import { Info } from "lucide-react";
+import { CircleQuestionMark, Info } from "lucide-react";
 import { cn } from "../../lib/utils";
 import Link from "next/link";
 import {
@@ -38,8 +38,8 @@ export default function SkateboardDeckFinder() {
   return (
     <div className="flex flex-col self-center gap-6 max-w-3xl p-3 sm:p-6 w-full">
       <div>
-        <h2 className="tracking-tight font-semibold text-lg flex flex-col sm:text-xl">
-          Ketahui Ukuran Sepatu Kamu
+        <h2 className="tracking-tight font-semibold text-lg flex gap-2 sm:text-xl">
+          Ketahui Ukuran Sepatu Kamu <CircleQuestionMark size={22} className="self-center" />
         </h2>
         <p className="text-sm text-muted-foreground">
           Ukuran sepatu menjadi acuan untuk memilih papan (deck) karena ukuran kaki mempengaruhi
