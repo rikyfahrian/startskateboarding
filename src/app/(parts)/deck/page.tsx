@@ -36,7 +36,7 @@ export default function DeckPage() {
             Saat ini, papan skateboard dibuat menggunakan 7 hingga 9 lembaran kayu tipis terpisah,
             yang dikenal sebagai (ply) yang direkatkan bersama. Perekatan beberapa lembaran kayu
             memungkinkan papan untuk melentur di bawah tekanan sehingga tahan terhadap kerusakan,
-            responsif terhadap gerakan Anda, dan ringan.
+            responsif terhadap gerakan Anda, dan ringan untuk Pop.
           </p>
           <ImageWithLoading
             src="/plies.png"
