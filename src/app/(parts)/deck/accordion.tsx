@@ -8,8 +8,6 @@ const items: Item[] = [
     trigger: "Apa itu deck 8.25, 8.0, 7.75, dll.?",
     content:
       'Lebar (width) deck diukur dalam inci di bagian terlebar papan. Ini menentukan seberapa besar ruang pijakan kamu. Skater street biasanya pakai 7.75"–8.25", sedangkan skater transition/vert sering pilih 8.5" ke atas.',
-
-    image: "/widthdeck.png",
   },
   {
     value: "item-2",

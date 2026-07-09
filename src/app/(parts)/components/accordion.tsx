@@ -36,7 +36,7 @@ export function AccordionBasic({ items }: { items: Item[] }) {
                 alt="Deck Skateboard"
                 width={300}
                 height={200}
-                className="rounded-lg object-cover mt-2 "
+                className="rounded-lg object-cover mt-2"
               />
             )}
           </AccordionContent>
